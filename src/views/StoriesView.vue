@@ -43,17 +43,24 @@ export default {
   display: grid;
   grid-gap: 10px;
   grid-auto-flow: dense;
-  grid-auto-rows: 120px;
+  grid-auto-rows: 100px;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 768px) {
+  .stories {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 160px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
   .stories {
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 160px;
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1400px) {
   .stories {
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: 160px;
