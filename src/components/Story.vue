@@ -49,8 +49,8 @@ export default {
   },
   computed: {
     strippedTitle() {
-      if (!this.isActive && this.title && this.title.length > 70) {
-        return `${this.title.slice(0, 69)}...`;
+      if (!this.isActive && this.title && this.title.length > 90) {
+        return `${this.title.slice(0, 89)}...`;
       }
       return this.title;
     },
