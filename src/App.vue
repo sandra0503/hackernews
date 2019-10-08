@@ -34,4 +34,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
+
+main {
+  min-height: 100vh;
+}
 </style>
