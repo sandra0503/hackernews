@@ -1,7 +1,10 @@
 <template>
   <div class="story" @click="onClick" :class="{ 'story--active': isActive }">
     <div class="story__score">
-      <span :class="{ 'story__vote': true, 'story__vote--upvoted': isUpvoted }" @click.stop.prevent="onUpvote"/>
+      <span
+        :class="{ story__vote: true, 'story__vote--upvoted': isUpvoted }"
+        @click.stop.prevent="onUpvote"
+      />
       <span v-if="score" class="story__score-value">{{ score }}</span>
     </div>
     <div class="story__content">
@@ -10,10 +13,10 @@
         by
         <span v-if="author" class="story__author-name">{{ author }}</span>
       </div>
-      <div v-if="strippedText" class="story__text">{{ strippedText }}</div>
-      <a v-if="linkUrl" class="story__link" target="__blank" :href="linkUrl"
-        >{{ linkUrl }}
-    </a>
+      <div v-if="strippedText" class="story__text" v-html="strippedText"></div>
+      <a v-if="linkUrl" class="story__link" target="__blank" :href="linkUrl">
+        {{ linkUrl }}
+      </a>
     </div>
   </div>
 </template>
@@ -24,13 +27,12 @@ export default {
   data() {
     return {
       isActive: false,
-      isUpvoted: false,
+      isUpvoted: false
     };
   },
   props: {
     title: {
-      type: String,
-      required: true
+      type: String
     },
     author: {
       type: String
@@ -47,14 +49,14 @@ export default {
   },
   computed: {
     strippedTitle() {
-      if (!this.isActive && this.title.length > 100) {
-         return `${this.title.slice(0, 99)}...`;
+      if (!this.isActive && this.title && this.title.length > 70) {
+        return `${this.title.slice(0, 69)}...`;
       }
       return this.title;
     },
     strippedText() {
       if (!this.isActive && this.text && this.text.length > 70) {
-         return `${this.text.slice(0, 69)}...`;
+        return `${this.text.slice(0, 69)}...`;
       }
       return this.text;
     },
@@ -78,17 +80,18 @@ export default {
   display: flex;
   padding: 10px;
   overflow: hidden;
-  transition: background .3s;
+  transition: background 0.3s;
+  border: 1px solid rgba(232, 236, 241, 1);
   border-radius: 3px;
   cursor: pointer;
 
   &:hover {
-    background-color: rgba(232, 236, 241, .5);
+    background-color: rgba(232, 236, 241, 0.5);
   }
 
   &.story--active {
     grid-area: span 2 / span 1;
-    background-color: rgba(232, 236, 241, .5)
+    background-color: rgba(232, 236, 241, 0.5);
   }
 }
 
@@ -107,14 +110,14 @@ export default {
   align-self: center;
 
   &:before {
-    content: '';
+    content: "";
     display: inline-flex;
     width: 0;
-    height: 0; 
+    height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     border-bottom: 16px solid #009688;
-    transition: border .2s;
+    transition: border 0.2s;
   }
 
   &:hover {

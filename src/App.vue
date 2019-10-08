@@ -1,16 +1,24 @@
 <template>
   <div id="app">
-    <StoriesView />
+    <Header />
+    <main>
+      <StoriesView />
+    </main>
+    <Footer />
   </div>
 </template>
 
 <script>
+import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
 import StoriesView from "./views/StoriesView.vue";
 
 export default {
   name: "app",
   components: {
-    StoriesView,
+    Header,
+    Footer,
+    StoriesView
   }
 };
 </script>

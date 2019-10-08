@@ -2,12 +2,13 @@
 
 exports[`Story component renders the component 1`] = `
 <div class="story">
-  <div class="story__score"><span class="story__score-value">104</span></div>
+  <div class="story__score"><span class="story__vote"></span> <span class="story__score-value">104</span></div>
   <div class="story__content">
     <div class="story__title">My YC app: Dropbox - Throw away your USB drive</div>
     <div class="story__author">
       by
-      <span class="story__author-name"></span></div>
+      <!---->
+    </div>
     <div class="story__text">Lorem ipsum</div>
     <!---->
   </div>

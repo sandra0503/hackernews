@@ -5,7 +5,7 @@ import Story from "@/components/Story";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import initialState from "@/store/state";
-import storyMock from "@/mocks/story";
+import storyMock from "@/__mocks__/story";
 
 const localVue = createLocalVue();
 localVue.use(Vuex);
@@ -22,8 +22,6 @@ describe("StoriesView", () => {
     return {
       wrapper,
       story: () => wrapper.find(Story),
-      header: () => wrapper.find(Header),
-      footer: () => wrapper.find(Footer)
     };
   };
 
@@ -38,16 +36,14 @@ describe("StoriesView", () => {
   });
 
   it("renders child components", () => {
-    state.stories = [storyMock];
+    state.stories = storyMock;
     const { story, header, footer } = build();
 
     expect(story().exists()).toBe(true);
-    expect(header().exists()).toBe(true);
-    expect(footer().exists()).toBe(true);
   });
 
   it("passes binded content props to content item components", () => {
-    state.stories = [storyMock];
+    state.stories = storyMock;
     const { story } = build();
 
     expect(story().vm.title).toBe(state.stories[0].title);

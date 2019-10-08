@@ -1,38 +1,32 @@
 <template>
-  <div class="stories-view">
-    <Header />
-    <main class="stories">
-      <Story
-        v-for="story in stories"
-        :key="story.id"
-        :author="story.by"
-        :score="story.score"
-        :text="story.text"
-        :title="story.title"
-        :url="story.url"
-      />
-    </main>
-    <Footer />
+  <div class="stories">
+    <Story
+      v-for="story in stories"
+      v-show="story.title"
+      :key="story.id"
+      :author="story.by"
+      :score="story.score"
+      :text="story.text"
+      :title="story.title"
+      :url="story.url"
+    />
   </div>
 </template>
 
 <script>
 import { mapState } from "vuex";
-import Header from "../components/Header.vue";
-import Footer from "../components/Footer.vue";
 import Story from "../components/Story.vue";
 
 export default {
   name: "StoriesView",
   components: {
-    Header,
-    Footer,
     Story
   },
+  created() {
+    this.$store.dispatch("FETCH_STORIES");
+  },
   computed: {
-    ...mapState({
-      stories: "stories"
-    })
+    ...mapState(["stories"])
   }
 };
 </script>

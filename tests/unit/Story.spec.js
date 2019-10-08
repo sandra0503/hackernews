@@ -1,6 +1,6 @@
 import { shallowMount } from "@vue/test-utils";
 import Story from "@/components/Story";
-import storyMock from "@/mocks/story";
+import storyMock from "@/__mocks__/story";
 
 describe("Story component", () => {
   let props;
@@ -21,7 +21,7 @@ describe("Story component", () => {
   };
 
   beforeEach(() => {
-    const { title, author, score, url, text } = storyMock;
+    const { title, author, score, url, text } = storyMock[0];
     props = {
       title,
       author,
@@ -64,5 +64,14 @@ describe("Story component", () => {
 
     expect(link().exists()).toBe(true);
     expect(link().attributes().href).toBe(props.url);
+  });
+
+  it("handles upvote on click of upvote symbol", () => {
+    const { score } = build();
+    const vote = score().find(".story__vote");
+    expect(vote.exists()).toBe(true);
+
+    vote.trigger("click");
+    expect(vote.classes()).toContain("story__vote--upvoted");
   });
 });

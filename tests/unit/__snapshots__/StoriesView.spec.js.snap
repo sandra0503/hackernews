@@ -1,28 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`StoriesView renders the component 1`] = `
-<div class="stories-view">
-  <header-stub></header-stub>
-  <main class="stories">
-    <story-stub title="My YC app: Dropbox - Throw away your USB drive" author="dhouston" score="104" url="http://www.getdropbox.com/u/2/screencast.html" text="lorem ipsum"></story-stub>
-    <story-stub title="My YC app: Dropbox - Throw away your USB drive" author="dhouston" score="104" url="http://www.getdropbox.com/u/2/screencast.html"></story-stub>
-    <story-stub title="My YC app: Dropbox - Throw away your USB drive" author="dhouston" score="104" url="http://www.getdropbox.com/u/2/screencast.html"></story-stub>
-    <story-stub title="My YC app: Dropbox - Throw away your USB drive" author="dhouston" score="104" url="http://www.getdropbox.com/u/2/screencast.html"></story-stub>
-    <story-stub title="My YC app: Dropbox - Throw away your USB drive" author="dhouston" score="104" url="http://www.getdropbox.com/u/2/screencast.html"></story-stub>
-    <story-stub title="My YC app: Dropbox - Throw away your USB drive" author="dhouston" score="104" url="http://www.getdropbox.com/u/2/screencast.html"></story-stub>
-    <story-stub title="My YC app: Dropbox - Throw away your USB drive" author="dhouston" score="104" url="http://www.getdropbox.com/u/2/screencast.html" text="lorem ipsum"></story-stub>
-    <story-stub title="My YC app: Dropbox - Throw away your USB drive" author="dhouston" score="104" url="http://www.getdropbox.com/u/2/screencast.html"></story-stub>
-    <story-stub title="My YC app: Dropbox - Throw away your USB drive" author="dhouston" score="104" url="http://www.getdropbox.com/u/2/screencast.html"></story-stub>
-    <story-stub title="My YC app: Dropbox - Throw away your USB drive" author="dhouston" score="104" url="http://www.getdropbox.com/u/2/screencast.html"></story-stub>
-    <story-stub title="My YC app: Dropbox - Throw away your USB drive" author="dhouston" score="104" url="http://www.getdropbox.com/u/2/screencast.html"></story-stub>
-    <story-stub title="My YC app: Dropbox - Throw away your USB drive" author="dhouston" score="104" url="http://www.getdropbox.com/u/2/screencast.html"></story-stub>
-    <story-stub title="My YC app: Dropbox - Throw away your USB drive" author="dhouston" score="104" url="http://www.getdropbox.com/u/2/screencast.html" text="lorem ipsum"></story-stub>
-    <story-stub title="My YC app: Dropbox - Throw away your USB drive" author="dhouston" score="104" url="http://www.getdropbox.com/u/2/screencast.html"></story-stub>
-    <story-stub title="My YC app: Dropbox - Throw away your USB drive" author="dhouston" score="104" url="http://www.getdropbox.com/u/2/screencast.html"></story-stub>
-    <story-stub title="My YC app: Dropbox - Throw away your USB drive" author="dhouston" score="104" url="http://www.getdropbox.com/u/2/screencast.html"></story-stub>
-    <story-stub title="My YC app: Dropbox - Throw away your USB drive" author="dhouston" score="104" url="http://www.getdropbox.com/u/2/screencast.html"></story-stub>
-    <story-stub title="My YC app: Dropbox - Throw away your USB drive" author="dhouston" score="104" url="http://www.getdropbox.com/u/2/screencast.html"></story-stub>
-  </main>
-  <footer-stub></footer-stub>
-</div>
-`;
+exports[`StoriesView renders the component 1`] = `<div class="stories"></div>`;
