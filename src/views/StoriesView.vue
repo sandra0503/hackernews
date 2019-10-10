@@ -33,11 +33,13 @@ export default {
 
 <style lang="scss">
 .stories {
+  max-width: 1400px;
+  margin: 0 auto;
   padding: 20px;
   display: grid;
   grid-gap: 10px;
   grid-auto-flow: dense;
-  grid-auto-rows: 100px;
+  grid-auto-rows: 150px;
 }
 
 @media only screen and (min-width: 768px) {

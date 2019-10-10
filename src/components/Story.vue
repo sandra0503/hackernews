@@ -8,7 +8,7 @@
       <span v-if="score" class="story__score-value">{{ score }}</span>
     </div>
     <div class="story__content">
-      <div v-if="strippedTitle" class="story__title">{{ strippedTitle }}</div>
+      <div class="story__title">{{ strippedTitle }}</div>
       <div class="story__author">
         by
         <span v-if="author" class="story__author-name">{{ author }}</span>
@@ -55,8 +55,8 @@ export default {
       return this.title;
     },
     strippedText() {
-      if (!this.isActive && this.text && this.text.length > 70) {
-        return `${this.text.slice(0, 69)}...`;
+      if (!this.isActive && this.text && this.text.length > 43) {
+        return `${this.text.slice(0, 42).replace(/[\r\n<p></p>]/g, " ")}...`;
       }
       return this.text;
     },
